@@ -71,13 +71,6 @@ public class DirectoryNode implements Element {
             throw new IllegalArgumentException("Child element cannot be null.");
         }
 
-        // Integrity check: prevent multiple parent ownership
-        if (child.getParent() != null && child.getParent() != this) {
-            throw new IllegalStateException(
-                    "Element '" + child.getName() + "' already belongs to parent '"
-                            + child.getParent().getName() + "'. Detach before adding.");
-        }
-
         // Integrity check: prevent cycles (cannot add self or an ancestor as child)
         Element current = this;
         while (current != null) {
@@ -87,6 +80,13 @@ public class DirectoryNode implements Element {
                                 + "' as a child of '" + this.name + "'.");
             }
             current = current.getParent();
+        }
+
+        // Integrity check: prevent multiple parent ownership
+        if (child.getParent() != null && child.getParent() != this) {
+            throw new IllegalStateException(
+                    "Element '" + child.getName() + "' already belongs to parent '"
+                            + child.getParent().getName() + "'. Detach before adding.");
         }
 
         // Integrity check: prevent duplicate sibling names
