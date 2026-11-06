@@ -248,4 +248,4 @@ The automated test suite in `kz.aitu.visitor.FileSystemVisitorTest` runs under J
 
 ## 6. Link to GitHub Repository
 
-- **GitHub Repository:** `https://github.com/nursultanmaratov/Assignment6_Visitor_SE2523_Maratov_Nursultan`
+- **GitHub Repository:** `https://github.com/Jozephjostar/Assignment6_Visitor_SE2523_Maratov_Nursultan.git`

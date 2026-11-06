@@ -156,7 +156,7 @@ html_content = """<!DOCTYPE html>
     <div class="meta-item"><strong>Student</strong>Nursultan Maratov</div>
     <div class="meta-item"><strong>Group</strong>SE-2523</div>
     <div class="meta-item"><strong>Test Suite</strong>8 / 8 Passing (100%)</div>
-    <div class="meta-item"><strong>Repository</strong>github.com/nursultanmaratov/...</div>
+    <div class="meta-item"><strong>Repository</strong>github.com/Jozephjostar/...</div>
 </div>
 
 <h2>1. Purpose & Architectural Design Choices</h2>
@@ -465,7 +465,7 @@ The test suite in <code>kz.aitu.visitor.FileSystemVisitorTest</code> executes vi
 <h2>7. GitHub Repository Link</h2>
 <p>
 The complete source code, commit history showing progressive visitor addition, and tests are available at:<br>
-<strong>GitHub Repository:</strong> <a href="https://github.com/nursultanmaratov/Assignment6_Visitor_SE2523_Maratov_Nursultan">https://github.com/nursultanmaratov/Assignment6_Visitor_SE2523_Maratov_Nursultan</a>
+<strong>GitHub Repository:</strong> <a href="https://github.com/Jozephjostar/Assignment6_Visitor_SE2523_Maratov_Nursultan.git">https://github.com/Jozephjostar/Assignment6_Visitor_SE2523_Maratov_Nursultan.git</a>
 </p>
 
 <div style="margin-top: 24px; padding-top: 6px; border-top: 1px solid #cbd5e1; font-size: 7.5pt; color: #64748b; text-align: center;">
@@ -476,7 +476,7 @@ Astana IT University • Department of Computer Science • Software Design Patt
 </html>
 """
 
-base_dir = "/Users/nursultanmaratov/.gemini/antigravity/scratch/Assignment6_Visitor_SE2523_Maratov_Nursultan"
+base_dir = os.path.dirname(os.path.abspath(__file__))
 html_path = os.path.join(base_dir, "report.html")
 pdf_path = os.path.join(base_dir, "REPORT_Assignment6_Visitor.pdf")
 
