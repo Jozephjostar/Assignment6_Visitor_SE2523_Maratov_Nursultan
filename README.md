@@ -1,9 +1,10 @@
 # Assignment 06: Visitor Pattern — Advanced File System
 
 **Course:** ShP-2216 – Software Design Patterns  
-**Programme:** 6B06102 – Software Engineering, 2nd Year  
+**Programme:** 6B06102 – Software Engineering  
 **Institution:** Astana IT University  
-**Student:** Nursultan Maratov (Group SE-2523)  
+**Student:** Nursultan Maratov  
+**Group:** SE-2523  
 **Format:** Individual | Java 17 | Maven | JUnit 5  
 
 ---

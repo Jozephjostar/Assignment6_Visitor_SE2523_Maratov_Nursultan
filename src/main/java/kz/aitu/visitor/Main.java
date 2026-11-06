@@ -16,7 +16,7 @@ public class Main {
         System.out.println("================================================================================");
         System.out.println("   ASSIGNMENT 06: VISITOR PATTERN - ADVANCED FILE SYSTEM DEMONSTRATION");
         System.out.println("   Course: ShP-2216 Software Design Patterns | Astana IT University");
-        System.out.println("   Student: Nursultan Maratov (SE-2523)");
+        System.out.println("   Student: Nursultan Maratov | Group: SE-2523");
         System.out.println("================================================================================\n");
 
         DirectoryNode root = buildSampleTree();

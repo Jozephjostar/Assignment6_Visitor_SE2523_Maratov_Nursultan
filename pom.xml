@@ -11,6 +11,17 @@
     <name>Assignment 6: Visitor Pattern - Advanced File System</name>
     <description>In-memory hierarchical file system with Visitor behavioral pattern</description>
 
+    <developers>
+        <developer>
+            <name>Nursultan Maratov</name>
+            <id>SE-2523</id>
+            <roles>
+                <role>Student</role>
+            </roles>
+            <organization>Astana IT University</organization>
+        </developer>
+    </developers>
+
     <properties>
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

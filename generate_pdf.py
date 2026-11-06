@@ -142,13 +142,13 @@ html_content = """<!DOCTYPE html>
 <!-- PAGE 1 -->
 <div class="header-box">
     <div>
-        <div class="inst-title">Astana IT University • Software Engineering • ShP-2216</div>
+        <div class="inst-title">Astana IT University • Software Engineering • Group SE-2523 • ShP-2216</div>
         <h1>Visitor Pattern — Advanced File System</h1>
         <div class="sub-title">Assignment 06 • Technical & Architectural Defense Report</div>
     </div>
     <div style="text-align: right; font-size: 8pt; color: #64748b;">
         <strong>Format:</strong> Individual | <strong>Language:</strong> Java 17 (Maven)<br>
-        <strong>Weight:</strong> 15% RK2 | <strong>Defense:</strong> Week 10
+        <strong>Weight:</strong> 15% RK2 | <strong>Group:</strong> SE-2523
     </div>
 </div>
 
@@ -469,7 +469,7 @@ The complete source code, commit history showing progressive visitor addition, a
 </p>
 
 <div style="margin-top: 24px; padding-top: 6px; border-top: 1px solid #cbd5e1; font-size: 7.5pt; color: #64748b; text-align: center;">
-Astana IT University • Department of Computer Science • Software Design Patterns (ShP-2216) • Assignment 06 Report
+Astana IT University • Software Engineering • Group SE-2523 • Software Design Patterns (ShP-2216) • Assignment 06 Report
 </div>
 
 </body>

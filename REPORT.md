@@ -3,7 +3,8 @@
 **Course:** ShP-2216 – Software Design Patterns (OP 6B06102 – Software Engineering)  
 **Academic Year:** 2026–2027 (2nd Year, 4th Trimester)  
 **Institution:** Astana IT University — School of Computer Science  
-**Student:** Nursultan Maratov (Group SE-2523)  
+**Student:** Nursultan Maratov  
+**Group:** SE-2523  
 **Topic:** Visitor Pattern — Advanced File System  
 
 ---
@@ -171,7 +172,7 @@ Below is the verified deterministic execution output produced by running `Main.j
 ================================================================================
    ASSIGNMENT 06: VISITOR PATTERN - ADVANCED FILE SYSTEM DEMONSTRATION
    Course: ShP-2216 Software Design Patterns | Astana IT University
-   Student: Nursultan Maratov (SE-2523)
+   Student: Nursultan Maratov | Group: SE-2523
 ================================================================================
 
 --- 1. FILE SYSTEM STRUCTURE VISUALIZATION ---
