@@ -2,23 +2,12 @@ package kz.aitu.visitor.model;
 
 import kz.aitu.visitor.visitor.Visitor;
 
-/**
- * Concrete Element representing a file leaf node in the file system tree.
- * Holds an immutable name and non-negative byte size.
- */
 public class FileNode implements Element {
 
     private final String name;
     private final long size;
     private DirectoryNode parent;
 
-    /**
-     * Constructs a new FileNode.
-     *
-     * @param name the file name (cannot be null, blank, or contain '/')
-     * @param size the non-negative size in bytes
-     * @throws IllegalArgumentException if name is invalid or size is negative
-     */
     public FileNode(String name, long size) {
         if (name == null || name.trim().isEmpty()) {
             throw new IllegalArgumentException("File name cannot be null or blank.");
@@ -38,11 +27,6 @@ public class FileNode implements Element {
         return name;
     }
 
-    /**
-     * Returns the size of the file in bytes.
-     *
-     * @return the byte size
-     */
     public long getSize() {
         return size;
     }
@@ -59,7 +43,6 @@ public class FileNode implements Element {
 
     @Override
     public void accept(Visitor visitor) {
-        // Double dispatch step 1: delegates to visit(FileNode)
         visitor.visit(this);
     }
 

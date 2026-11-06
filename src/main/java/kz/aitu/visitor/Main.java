@@ -10,10 +10,6 @@ import kz.aitu.visitor.visitor.Visitor;
 
 import java.util.List;
 
-/**
- * Deterministic console application demonstrating the Visitor Pattern
- * over an in-memory hierarchical file system.
- */
 public class Main {
 
     public static void main(String[] args) {
@@ -23,20 +19,17 @@ public class Main {
         System.out.println("   Student: Nursultan Maratov (SE-2523)");
         System.out.println("================================================================================\n");
 
-        // 1. Build sample file system hierarchy
         DirectoryNode root = buildSampleTree();
 
         System.out.println("--- 1. FILE SYSTEM STRUCTURE VISUALIZATION ---");
         printTree(root, "");
         System.out.println();
 
-        // 2. Demonstrate Operation 1: TotalSizeVisitor
         System.out.println("--- 2. OPERATION 1: TOTAL SIZE VISITOR (R3) ---");
         TotalSizeVisitor sizeVisitor = new TotalSizeVisitor();
         root.accept(sizeVisitor);
         System.out.printf("Total file size for entire tree ('%s'): %d bytes%n", root.getName(), sizeVisitor.getTotalSize());
 
-        // Subtree size
         Element srcNode = root.getChild("src");
         if (srcNode != null) {
             TotalSizeVisitor srcSizeVisitor = new TotalSizeVisitor();
@@ -45,7 +38,6 @@ public class Main {
         }
         System.out.println();
 
-        // 3. Demonstrate Operation 2: SearchVisitor
         System.out.println("--- 3. OPERATION 2: SEARCH VISITOR (R4, Deterministic & Root-Relative) ---");
         System.out.println("Search A: Files containing '.java' with size >= 2,000 bytes");
         SearchVisitor javaSearch = new SearchVisitor(".java", 2000);
@@ -63,7 +55,6 @@ public class Main {
         printSearchResults(noMatchSearch.getMatchingPaths());
         System.out.println();
 
-        // 4. Demonstrate Operation 3: StatisticsVisitor
         System.out.println("--- 4. OPERATION 3: STATISTICS VISITOR (R5, Extensible OCP Operation) ---");
         StatisticsVisitor statsVisitor = new StatisticsVisitor();
         root.accept(statsVisitor);
@@ -73,17 +64,15 @@ public class Main {
         System.out.printf("  • Maximum Tree Depth:        %d (root depth = 0)%n", statsVisitor.getMaxDepth());
         System.out.println();
 
-        // 5. Demonstrate State Reusability & Run Order Independence (T7)
         System.out.println("--- 5. REUSABILITY & REPEAT RUN VERIFICATION (T7) ---");
-        root.accept(sizeVisitor); // Re-run existing size visitor instance
+        root.accept(sizeVisitor);
         System.out.printf("Re-running TotalSizeVisitor without recreation: %d bytes (No leakage/doubling)%n", sizeVisitor.getTotalSize());
 
-        root.accept(statsVisitor); // Re-run existing stats visitor instance
+        root.accept(statsVisitor);
         System.out.printf("Re-running StatisticsVisitor: %d files, %d dirs, depth %d (No multiplied counters)%n",
                 statsVisitor.getFileCount(), statsVisitor.getDirectoryCount(), statsVisitor.getMaxDepth());
         System.out.println();
 
-        // 6. Demonstrate Tree Integrity Checks (R6, T8)
         System.out.println("--- 6. TREE INTEGRITY & INVARIANT VALIDATION (R6, T8) ---");
         testIntegritySafeguard("Reject Negative File Size", () -> new FileNode("bad.bin", -500));
         testIntegritySafeguard("Reject Duplicate Sibling Name", () -> root.addChild(new FileNode("README.md", 100)));
@@ -147,7 +136,6 @@ public class Main {
     }
 
     private static void printTree(Element element, String indent) {
-        // Double dispatch can be used or custom visitor. Here we use visitor to print!
         element.accept(new Visitor() {
             @Override
             public void visit(FileNode file) {
